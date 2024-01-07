@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("http://localhost:3000/api/members");
+                const res = await fetch(URL);
                 const data = await res.json();
                 setMembersData(data);
             } catch (error) {
