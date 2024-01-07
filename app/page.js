@@ -58,7 +58,7 @@ export default function Home() {
             <div className="mt-10">
                 <div className="w-32 mx-auto">
                     <p className="text-center font-bold">Leader</p>
-                    <Image src={membersData["Department of Leadership"]["Leader"][1]["img"]} className="w-32 mt-5" />
+                    <Image src={membersData["Department of Leadership"]["Leader"][1]["img"]["src"]} width={1000} height={1000} className="w-32 mt-5" />
                     <p className="mt-4 text-center">
                         {membersData["Department of Leadership"]["Leader"][0]["name"]}
                     </p>
