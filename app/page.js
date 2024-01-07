@@ -33,9 +33,10 @@ export default function Home() {
             <div>
                 <Image
                     src={logollcctc}
-                    width={140}
-                    height={140}
-                    className="mx-auto"
+                    width={1000}
+                    height={1000}
+                    className="mx-auto w-auto h-auto"
+                    alt="llcctc"
                 />
                 <p className="text-center mt-5 font-bold text-xl">
                     LLCC Toastmaster Club
@@ -65,7 +66,7 @@ export default function Home() {
                         src={membersData.Leadership.Leader.img.src}
                         width={1000}
                         height={1000}
-                        className="w-32 mt-5 rounded-md"
+                        className="w-auto h-auto mt-5 rounded-md"
                         alt={membersData.Leadership.Leader.name}
                     />
                     <p className="mt-4 text-center">
@@ -85,7 +86,7 @@ export default function Home() {
                                 alt={member.name}
                                 width={1000}
                                 height={1000}
-                                className="w-32 mt-5 rounded-md"
+                                className="w-auto h-auto mt-5 rounded-md"
                             />
                             <p className="mt-4 text-center">{member.name}</p>
                         </div>
@@ -109,7 +110,7 @@ export default function Home() {
                             src={membersData.Activity.Leader.img.src}
                             width={1000}
                             height={1000}
-                            className="w-32 mt-5 rounded-md"
+                            className="w-auto h-auto mt-5 rounded-md"
                             alt={membersData.Activity.Leader.name}
                         />
                         <p className="mt-4 text-center">
@@ -127,7 +128,7 @@ export default function Home() {
                                     src={member.img.src}
                                     width={1000}
                                     height={1000}
-                                    className="w-32 mt-5 rounded-md"
+                                    className="w-auto h-auto mt-5 rounded-md"
                                     alt={member.name}
                                 />
                                 <p className="mt-4 text-center">
@@ -155,7 +156,7 @@ export default function Home() {
                             src={membersData.EnglishSpeaking.Leader.img.src}
                             width={1000}
                             height={1000}
-                            className="w-32 mt-5 rounded-md"
+                            className="w-auto h-auto mt-5 rounded-md"
                             alt={membersData.EnglishSpeaking.Leader.name}
                         />
                         <p className="mt-4 text-center">
@@ -173,7 +174,7 @@ export default function Home() {
                                     src={member.img.src}
                                     width={1000}
                                     height={1000}
-                                    className="w-32 mt-5 rounded-md"
+                                    className="w-auto h-auto mt-5 rounded-md"
                                     alt={member.name}
                                 />
                                 <p className="mt-4 text-center">
@@ -201,7 +202,7 @@ export default function Home() {
                             src={membersData.EnglishTeaching.Leader.img.src}
                             width={1000}
                             height={1000}
-                            className="w-32 mt-5 rounded-md"
+                            className="w-auto h-auto rounded-md"
                             alt={membersData.EnglishTeaching.Leader.name}
                         />
                         <p className="mt-4 text-center">
@@ -219,7 +220,7 @@ export default function Home() {
                                     src={member.img.src}
                                     width={1000}
                                     height={1000}
-                                    className="w-32 mt-5 rounded-md"
+                                    className="w-auto h-auto mt-5 rounded-md"
                                     alt={member.name}
                                 />
                                 <p className="mt-4 text-center">
