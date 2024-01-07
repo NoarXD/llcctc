@@ -66,7 +66,7 @@ export default function Home() {
                     {membersData["Department of Leadership"][
                         "Vice Leaders"
                     ].map((member) => (
-                        <div className="w-auto mx-auto">
+                        <div className="w-auto mx-auto" key={member}>
                             <p className="text-center font-bold">Vice Leader</p>
                             <Image src={personImg} alt={member} className="w-32 mt-5" />
                             <p className="mt-4 text-center">{member}</p>
