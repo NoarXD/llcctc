@@ -6,8 +6,8 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
     const [membersData, setMembersData] = useState(null);
-    const URL = "https://llcctc.vercel.app/api/members"
-    // const URL = "http://localhost:3000/api/members";
+    // const URL = "https://llcctc.vercel.app/api/members"
+    const URL = "http://localhost:3000/api/members";
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,6 +37,7 @@ export default function Home() {
                     height={1000}
                     className="mx-auto w-auto h-auto"
                     alt="llcctc"
+                    priority={true}
                 />
                 <p className="text-center mt-5 font-bold text-xl">
                     LLCC Toastmaster Club
