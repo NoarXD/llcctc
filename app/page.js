@@ -66,7 +66,8 @@ export default function Home() {
                         width={1000}
                         height={1000}
                         className="w-auto h-auto mt-5 rounded-md"
-                        alt={membersData.Leadership.Leader.name}
+                        // alt={membersData.Leadership.Leader.name}
+                        alt="Leadership"
                     />
                     <p className="mt-4 text-center">
                         {membersData.Leadership.Leader.name}
@@ -82,7 +83,8 @@ export default function Home() {
                             <p className="text-center font-bold">Vice Leader</p>
                             <Image
                                 src={member.img.src}
-                                alt={member.name}
+                                // alt={member.name}
+                                alt="ViceLeaders"
                                 width={1000}
                                 height={1000}
                                 className="w-auto h-auto mt-5 rounded-md"
@@ -110,7 +112,8 @@ export default function Home() {
                             width={1000}
                             height={1000}
                             className="w-auto h-auto mt-5 rounded-md"
-                            alt={membersData.Activity.Leader.name}
+                            // alt={membersData.Activity.Leader.name}
+                            alt="Activity"
                         />
                         <p className="mt-4 text-center">
                             {membersData.Activity.Leader.name}
@@ -128,7 +131,8 @@ export default function Home() {
                                     width={1000}
                                     height={1000}
                                     className="w-auto h-auto mt-5 rounded-md"
-                                    alt={member.name}
+                                    // alt={member.name}
+                                    alt="Activity"
                                 />
                                 <p className="mt-4 text-center">
                                     {member.name}
@@ -156,7 +160,8 @@ export default function Home() {
                             width={1000}
                             height={1000}
                             className="w-auto h-auto mt-5 rounded-md"
-                            alt={membersData.EnglishSpeaking.Leader.name}
+                            // alt={membersData.EnglishSpeaking.Leader.name}
+                            alt="EnglishSpeaking"
                         />
                         <p className="mt-4 text-center">
                             {membersData.EnglishSpeaking.Leader.name}
@@ -174,7 +179,8 @@ export default function Home() {
                                     width={1000}
                                     height={1000}
                                     className="w-auto h-auto mt-5 rounded-md"
-                                    alt={member.name}
+                                    // alt={member.name}
+                                    alt="EnglishSpeaking"
                                 />
                                 <p className="mt-4 text-center">
                                     {member.name}
@@ -202,7 +208,8 @@ export default function Home() {
                             width={1000}
                             height={1000}
                             className="w-auto h-auto rounded-md"
-                            alt={membersData.EnglishTeaching.Leader.name}
+                            // alt={membersData.EnglishTeaching.Leader.name}
+                            alt="EnglishTeaching"
                         />
                         <p className="mt-4 text-center">
                             {membersData.EnglishTeaching.Leader.name}
@@ -220,7 +227,8 @@ export default function Home() {
                                     width={1000}
                                     height={1000}
                                     className="w-auto h-auto mt-5 rounded-md"
-                                    alt={member.name}
+                                    // alt={member.name}
+                                    alt="EnglishTeaching"
                                 />
                                 <p className="mt-4 text-center">
                                     {member.name}
@@ -248,7 +256,8 @@ export default function Home() {
                             width={1000}
                             height={1000}
                             className="w-32 mt-5 rounded-md"
-                            alt={membersData.ExternalRelations.Leader.name}
+                            // alt={membersData.ExternalRelations.Leader.name}
+                            alt="ExternalRelations"
                         />
                         <p className="mt-4 text-center">
                             {membersData.ExternalRelations.Leader.name}
@@ -266,7 +275,8 @@ export default function Home() {
                                     width={1000}
                                     height={1000}
                                     className="w-32 mt-5 rounded-md"
-                                    alt={member.name}
+                                    // alt={member.name}
+                                    alt="ExternalRelations"
                                 />
                                 <p className="mt-4 text-center">
                                     {member.name}
