@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import logollcctc from "../public/logollcctc.jpg";
-import personImg from "../public/person.png";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -31,13 +30,12 @@ export default function Home() {
     return (
         <main className="xl:max-w-screen-lg md:max-w-screen-sm md:mx-auto mx-10">
             <div>
-                <Image
-                    src={logollcctc}
+                <img
+                    src="/logollcctc.jpg"
                     width={1000}
                     height={1000}
                     className="mx-auto w-auto h-auto"
                     alt="llcctc"
-                    priority={true}
                 />
                 <p className="text-center mt-5 font-bold text-xl">
                     LLCC Toastmaster Club
@@ -80,7 +78,7 @@ export default function Home() {
                     data-aos-duration="1000"
                 >
                     {membersData.Leadership.ViceLeaders.map((member) => (
-                        <div className="w-auto mx-auto" key={member.name}>
+                        <div className="w-32 mx-auto" key={member.name}>
                             <p className="text-center font-bold">Vice Leader</p>
                             <Image
                                 src={member.img.src}
