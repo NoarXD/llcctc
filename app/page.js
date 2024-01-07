@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
     const [membersData, setMembersData] = useState(null);
-    const URL = "http://localhost:3000/api/members" || "https://llcctc.vercel.app/api/members"
+    const URL = "https://llcctc.vercel.app/api/members"
 
     useEffect(() => {
         const fetchData = async () => {
