@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
     const [membersData, setMembersData] = useState(null);
-    const URL = "https://llcctc.vercel.app/api/members"
+    // const URL = "https://llcctc.vercel.app/api/members"
+    const URL = "http://localhost:3000/api/members";
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,8 +26,6 @@ export default function Home() {
     if (!membersData) {
         return <p>Loading...</p>;
     }
-
-    console.log(membersData["Department of Leadership"]["Vice Leaders"]);
 
     // Render your component using clubData
     return (
@@ -48,323 +47,235 @@ export default function Home() {
                     Mr Peter, with a total of 21 members.
                 </p>
             </div>
-            <div className="mt-10 grid grid-cols-10 md:grid-cols-3 gap-0 content-center">
+            <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                 <hr className="relative top-[12px] border" />
-                <p className="text-center col-span-8 md:col-auto border-l-2 border-r-2 rounded-md">
+                <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                     LLCC Toastmaster Club Structure
                 </p>
                 <hr className="relative top-[12px] border" />
             </div>
             <div className="mt-10">
-                <div className="w-32 mx-auto">
+                <div
+                    className="w-32 mx-auto"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
                     <p className="text-center font-bold">Leader</p>
-                    <Image src={membersData["Department of Leadership"]["Leader"][1]["img"]["src"]} width={1000} height={1000} className="w-32 mt-5" />
+                    <Image
+                        src={membersData.Leadership.Leader.img.src}
+                        width={1000}
+                        height={1000}
+                        className="w-32 mt-5 rounded-md"
+                        alt={membersData.Leadership.Leader.name}
+                    />
                     <p className="mt-4 text-center">
-                        {membersData["Department of Leadership"]["Leader"][0]["name"]}
+                        {membersData.Leadership.Leader.name}
                     </p>
                 </div>
-                <div className="grid grid-cols-2">
-                    {membersData["Department of Leadership"][
-                        "Vice Leaders"
-                    ].map((member) => (
-                        <div className="w-auto mx-auto" key={member}>
+                <div
+                    className="grid grid-cols-2"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    {membersData.Leadership.ViceLeaders.map((member) => (
+                        <div className="w-auto mx-auto" key={member.name}>
                             <p className="text-center font-bold">Vice Leader</p>
-                            <Image src={personImg} alt={member} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">{member}</p>
+                            <Image
+                                src={member.img.src}
+                                alt={member.name}
+                                width={1000}
+                                height={1000}
+                                className="w-32 mt-5 rounded-md"
+                            />
+                            <p className="mt-4 text-center">{member.name}</p>
                         </div>
                     ))}
                 </div>
-                <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
+                <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
+                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                         Department of Activity
                     </p>
                     <hr className="relative top-[12px] border" />
                 </div>
                 <div className="mt-10">
-                    <div className="w-32 mx-auto">
+                    <div
+                        className="w-32 mx-auto"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <p className="text-center font-bold">Leader</p>
-                        <Image src={personImg} className="w-32 mt-5" />
-                        <p className="mt-4 text-center">Mr Khammoun</p>
+                        <Image
+                            src={membersData.Activity.Leader.img.src}
+                            width={1000}
+                            height={1000}
+                            className="w-32 mt-5 rounded-md"
+                            alt={membersData.Activity.Leader.name}
+                        />
+                        <p className="mt-4 text-center">
+                            {membersData.Activity.Leader.name}
+                        </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Tonkar</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Khamxay</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Miss Nouphaluck</p>
-                        </div>
+                    <div
+                        className="grid grid-cols-2 md:grid-cols-3 gap-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        {membersData.Activity.Members.map((member) => (
+                            <div className="w-auto mx-auto" key={member.name}>
+                                <Image
+                                    src={member.img.src}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-32 mt-5 rounded-md"
+                                    alt={member.name}
+                                />
+                                <p className="mt-4 text-center">
+                                    {member.name}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
+                <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-                        Department of English Speaking
+                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                        English Speaking Department
                     </p>
                     <hr className="relative top-[12px] border" />
                 </div>
                 <div className="mt-10">
-                    <div className="w-32 mx-auto">
+                    <div
+                        className="w-32 mx-auto"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <p className="text-center font-bold">Leader</p>
-                        <Image src={personImg} className="w-32 mt-5" />
-                        <p className="mt-4 text-center">Miss Anna</p>
+                        <Image
+                            src={membersData.EnglishSpeaking.Leader.img.src}
+                            width={1000}
+                            height={1000}
+                            className="w-32 mt-5 rounded-md"
+                            alt={membersData.EnglishSpeaking.Leader.name}
+                        />
+                        <p className="mt-4 text-center">
+                            {membersData.EnglishSpeaking.Leader.name}
+                        </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Miss Panda</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Lidsamai</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Miss Pinky</p>
-                        </div>
+                    <div
+                        className="grid grid-cols-2 md:grid-cols-3 gap-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        {membersData.EnglishSpeaking.Members.map((member) => (
+                            <div className="w-auto mx-auto" key={member.name}>
+                                <Image
+                                    src={member.img.src}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-32 mt-5 rounded-md"
+                                    alt={member.name}
+                                />
+                                <p className="mt-4 text-center">
+                                    {member.name}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
+                <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-                        Department of English Teaching
+                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                        English Teaching Department
                     </p>
                     <hr className="relative top-[12px] border" />
                 </div>
                 <div className="mt-10">
-                    <div className="w-32 mx-auto">
+                    <div
+                        className="w-32 mx-auto"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <p className="text-center font-bold">Leader</p>
-                        <Image src={personImg} className="w-32 mt-5" />
-                        <p className="mt-4 text-center">Mr Sonsay</p>
+                        <Image
+                            src={membersData.EnglishTeaching.Leader.img.src}
+                            width={1000}
+                            height={1000}
+                            className="w-32 mt-5 rounded-md"
+                            alt={membersData.EnglishTeaching.Leader.name}
+                        />
+                        <p className="mt-4 text-center">
+                            {membersData.EnglishTeaching.Leader.name}
+                        </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Saysamone</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Yang Kong</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Dala</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Ded</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Sayson</p>
-                        </div>
+                    <div
+                        className="grid grid-cols-2 md:grid-cols-3 gap-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        {membersData.EnglishTeaching.Members.map((member) => (
+                            <div className="w-auto mx-auto" key={member.name}>
+                                <Image
+                                    src={member.img.src}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-32 mt-5 rounded-md"
+                                    alt={member.name}
+                                />
+                                <p className="mt-4 text-center">
+                                    {member.name}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
+                <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-                        Department of External relations
+                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                        External relations Department
                     </p>
                     <hr className="relative top-[12px] border" />
                 </div>
                 <div className="mt-10">
-                    <div className="w-32 mx-auto">
+                    <div
+                        className="w-32 mx-auto"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <p className="text-center font-bold">Leader</p>
-                        <Image src={personImg} className="w-32 mt-5" />
-                        <p className="mt-4 text-center">Miss Nuttaly</p>
+                        <Image
+                            src={membersData.ExternalRelations.Leader.img.src}
+                            width={1000}
+                            height={1000}
+                            className="w-32 mt-5 rounded-md"
+                            alt={membersData.ExternalRelations.Leader.name}
+                        />
+                        <p className="mt-4 text-center">
+                            {membersData.ExternalRelations.Leader.name}
+                        </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Miss Namwarn</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Miss Ulin</p>
-                        </div>
-                        <div className="w-auto mx-auto">
-                            <Image src={personImg} className="w-32 mt-5" />
-                            <p className="mt-4 text-center">Mr Alino</p>
-                        </div>
+                    <div
+                        className="grid grid-cols-2 md:grid-cols-3 gap-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        {membersData.ExternalRelations.Members.map((member) => (
+                            <div className="w-auto mx-auto" key={member.name}>
+                                <Image
+                                    src={member.img.src}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-32 mt-5 rounded-md"
+                                    alt={member.name}
+                                />
+                                <p className="mt-4 text-center">
+                                    {member.name}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </main>
     );
 }
-
-// export default function Home() {
-//     return (
-//         <main className="xl:max-w-screen-lg md:max-w-screen-sm md:mx-auto mx-10">
-//             <div>
-//                 <Image
-//                     src={logollcctc}
-//                     width={140}
-//                     height={140}
-//                     className="mx-auto"
-//                 />
-//                 <p className="text-center mt-5 font-bold text-xl">
-//                     LLCC Toastmaster Club
-//                 </p>
-//             </div>
-//             <div className="mt-2">
-//                 <p className="text-center text-gray-300">
-//                     LLCC Toastmaster Club was established on 12/1/2023, led by
-//                     Mr Peter, with a total of 21 members.
-//                 </p>
-//             </div>
-//             <div className="mt-10 grid grid-cols-10 md:grid-cols-3 gap-0 content-center">
-//                 <hr className="relative top-[12px] border" />
-//                 <p className="text-center col-span-8 md:col-auto border-l-2 border-r-2 rounded-md">
-//                     LLCC Toastmaster Club Structure
-//                 </p>
-//                 <hr className="relative top-[12px] border" />
-//             </div>
-//             <div className="mt-10">
-//                 <div className="w-32 mx-auto">
-//                     <p className="text-center font-bold">Leader</p>
-//                     <Image src={personImg} className="w-32 mt-5" />
-//                     <p className="mt-4 text-center">Mr Johnny</p>
-//                 </div>
-//                 <div className="grid grid-cols-2">
-//                     <div className="w-auto mx-auto">
-//                         <p className="text-center font-bold">Vice Leader</p>
-//                         <Image src={personImg} className="w-32 mt-5" />
-//                         <p className="mt-4 text-center">Mr Khamthong</p>
-//                     </div>
-//                     <div className="w-auto mx-auto">
-//                         <p className="text-center font-bold">Vice Leader</p>
-//                         <Image src={personImg} className="w-32 mt-5" />
-//                         <p className="mt-4 text-center">Miss Manida</p>
-//                     </div>
-//                 </div>
-//                 <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
-//                     <hr className="relative top-[12px] border" />
-//                     <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-//                         Department of Activity
-//                     </p>
-//                     <hr className="relative top-[12px] border" />
-//                 </div>
-//                 <div className="mt-10">
-//                     <div className="w-32 mx-auto">
-//                         <p className="text-center font-bold">Leader</p>
-//                         <Image src={personImg} className="w-32 mt-5" />
-//                         <p className="mt-4 text-center">Mr Khammoun</p>
-//                     </div>
-//                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Tonkar</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Khamxay</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Miss Nouphaluck</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
-//                     <hr className="relative top-[12px] border" />
-//                     <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-//                         Department of English Speaking
-//                     </p>
-//                     <hr className="relative top-[12px] border" />
-//                 </div>
-//                 <div className="mt-10">
-//                     <div className="w-32 mx-auto">
-//                         <p className="text-center font-bold">Leader</p>
-//                         <Image src={personImg} className="w-32 mt-5" />
-//                         <p className="mt-4 text-center">Miss Anna</p>
-//                     </div>
-//                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Miss Panda</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Lidsamai</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Miss Pinky</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
-//                     <hr className="relative top-[12px] border" />
-//                     <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-//                         Department of English Teaching
-//                     </p>
-//                     <hr className="relative top-[12px] border" />
-//                 </div>
-//                 <div className="mt-10">
-//                     <div className="w-32 mx-auto">
-//                         <p className="text-center font-bold">Leader</p>
-//                         <Image src={personImg} className="w-32 mt-5" />
-//                         <p className="mt-4 text-center">Mr Sonsay</p>
-//                     </div>
-//                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Saysamone</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Yang Kong</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Dala</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Ded</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Sayson</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className="mt-10 grid grid-cols-5 md:grid-cols-3 gap-0 content-center">
-//                     <hr className="relative top-[12px] border" />
-//                     <p className="text-center col-span-3 md:col-auto border-l-2 border-r-2 rounded-md">
-//                         Department of External relations
-//                     </p>
-//                     <hr className="relative top-[12px] border" />
-//                 </div>
-//                 <div className="mt-10">
-//                     <div className="w-32 mx-auto">
-//                         <p className="text-center font-bold">Leader</p>
-//                         <Image src={personImg} className="w-32 mt-5" />
-//                         <p className="mt-4 text-center">Miss Nuttaly</p>
-//                     </div>
-//                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Miss Namwarn</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Miss Ulin</p>
-//                         </div>
-//                         <div className="w-auto mx-auto">
-//                             <Image src={personImg} className="w-32 mt-5" />
-//                             <p className="mt-4 text-center">Mr Alino</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </main>
-//     );
-// }

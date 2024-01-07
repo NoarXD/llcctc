@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import MyNavbar from "@/components/Navbar";
+import { AOSInit } from "./aos";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <html lang="en" className="dark">
             <body className={inter.className}>
                 <Providers>
+                    <AOSInit />
                     <MyNavbar />
                     {children}
                 </Providers>
