@@ -8,12 +8,12 @@ import MissNuttaly from "../../../public/members/MissNuttaly.jpg"
 import MissPanda from "../../../public/members/MissPanda.jpg"
 import MrKhamxay from "../../../public/members/MrKhamxay.jpg"
 import MrSayson from "../../../public/members/MrSayson.jpg"
-import MrJohnny from "../../../public/members/MrJohnny.jpg"
+// import MrJohnny from "../../../public/members/MrJohnny.jpg"
 import MrKhammoun from "../../../public/members/MrKhammoun.jpg"
 import MrKhamthong from "../../../public/members/MrKhamthong.jpg"
 const members = {
     Leadership: {
-        Leader: { name: "Mr Johnny", img: MrJohnny },
+        Leader: { name: "Mr Johnny", img: "/members/MrJohnny.jpg" },
         ViceLeaders: [
             { name: "Mr Khamthong", img: MrKhamthong },
             { name: "Miss Manida", img: MissManida },

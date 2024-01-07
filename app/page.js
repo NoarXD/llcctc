@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
     const [membersData, setMembersData] = useState(null);
-    const URL = "https://llcctc.vercel.app/api/members"
-    // const URL = "http://localhost:3000/api/members";
+    // const URL = "https://llcctc.vercel.app/api/members"
+    const URL = "http://localhost:3000/api/members";
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,7 +34,7 @@ export default function Home() {
                     src="/logollcctc.jpg"
                     width={1000}
                     height={1000}
-                    className="mx-auto w-auto h-auto"
+                    className="mx-auto w-36 h-auto"
                     alt="llcctc"
                 />
                 <p className="text-center mt-5 font-bold text-xl">
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                 <hr className="relative top-[12px] border" />
-                <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                <p className="text-center font-bold col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                     LLCC Toastmaster Club Structure
                 </p>
                 <hr className="relative top-[12px] border" />
@@ -62,7 +62,7 @@ export default function Home() {
                 >
                     <p className="text-center font-bold">Leader</p>
                     <Image
-                        src={membersData.Leadership.Leader.img.src}
+                        src={membersData.Leadership.Leader.img}
                         width={1000}
                         height={1000}
                         className="w-auto h-auto mt-5 rounded-md"
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
                 <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                    <p className="text-center font-bold col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                         Department of Activity
                     </p>
                     <hr className="relative top-[12px] border" />
@@ -122,7 +122,7 @@ export default function Home() {
                         data-aos-duration="1000"
                     >
                         {membersData.Activity.Members.map((member) => (
-                            <div className="w-auto mx-auto" key={member.name}>
+                            <div className="w-32 mx-auto" key={member.name}>
                                 <Image
                                     src={member.img.src}
                                     width={1000}
@@ -139,7 +139,7 @@ export default function Home() {
                 </div>
                 <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                    <p className="text-center font-bold col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                         English Speaking Department
                     </p>
                     <hr className="relative top-[12px] border" />
@@ -168,7 +168,7 @@ export default function Home() {
                         data-aos-duration="1000"
                     >
                         {membersData.EnglishSpeaking.Members.map((member) => (
-                            <div className="w-auto mx-auto" key={member.name}>
+                            <div className="w-32 mx-auto" key={member.name}>
                                 <Image
                                     src={member.img.src}
                                     width={1000}
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
                 <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                    <p className="text-center font-bold col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                         English Teaching Department
                     </p>
                     <hr className="relative top-[12px] border" />
@@ -214,7 +214,7 @@ export default function Home() {
                         data-aos-duration="1000"
                     >
                         {membersData.EnglishTeaching.Members.map((member) => (
-                            <div className="w-auto mx-auto" key={member.name}>
+                            <div className="w-32 mx-auto" key={member.name}>
                                 <Image
                                     src={member.img.src}
                                     width={1000}
@@ -231,7 +231,7 @@ export default function Home() {
                 </div>
                 <div className="mt-10 grid grid-cols-12 md:grid-cols-3 gap-0 content-center">
                     <hr className="relative top-[12px] border" />
-                    <p className="text-center col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
+                    <p className="text-center font-bold col-span-10 md:col-auto border-l-2 border-r-2 rounded-md">
                         External relations Department
                     </p>
                     <hr className="relative top-[12px] border" />
