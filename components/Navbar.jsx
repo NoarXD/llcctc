@@ -19,7 +19,7 @@ export default function MyNavbar() {
 
     const menuItem = ["Home", "Announcement", "TCTalk", "Activity"];
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen}>
+        <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}

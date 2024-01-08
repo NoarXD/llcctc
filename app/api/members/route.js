@@ -1,36 +1,26 @@
 import { NextResponse } from "next/server";
 import personImg from "../../../public/person.png";
-import MrTonkar from "../../../public/members/MrTonkar.jpg"
-import MissManida from "../../../public/members/MissManida.jpg"
-import MissNamwarn from "../../../public/members/MissNamwarn.jpg"
-import MissNouphaluck from "../../../public/members/MissNouphaluck.jpg"
-import MissNuttaly from "../../../public/members/MissNuttaly.jpg"
-import MissPanda from "../../../public/members/MissPanda.jpg"
-import MrKhamxay from "../../../public/members/MrKhamxay.jpg"
-import MrSayson from "../../../public/members/MrSayson.jpg"
-// import MrJohnny from "../../../public/members/MrJohnny.jpg"
-import MrKhammoun from "../../../public/members/MrKhammoun.jpg"
-import MrKhamthong from "../../../public/members/MrKhamthong.jpg"
+
 const members = {
     Leadership: {
         Leader: { name: "Mr Johnny", img: "/members/MrJohnny.jpg" },
         ViceLeaders: [
-            { name: "Mr Khamthong", img: MrKhamthong },
-            { name: "Miss Manida", img: MissManida },
+            { name: "Mr Khamthong", img: "/members/MrKhamthong.jpg" },
+            { name: "Miss Manida", img: "/members/MissManida.jpg" },
         ],
     },
     Activity: {
-        Leader: { name: "Mr Khammoun", img: MrKhammoun },
+        Leader: { name: "Mr Khammoun", img: "/members/MrKhammoun.jpg" },
         Members: [
-            { name: "Mr Tonkar", img: MrTonkar },
-            { name: "Mr Khamxay", img: MrKhamxay },
-            { name: "Miss Nouphaluck", img: MissNouphaluck },
+            { name: "Mr Tonkar", img: "/members/MrTonkar.jpg" },
+            { name: "Mr Khamxay", img: "/members/MrKhamxay.jpg" },
+            { name: "Miss Nouphaluck", img: "/members/MissNouphaluck.jpg" },
         ],
     },
     EnglishSpeaking: {
         Leader: { name: "Miss Anna", img: personImg },
         Members: [
-            { name: "Miss Panda", img: MissPanda },
+            { name: "Miss Panda", img: "/members/MissPanda.jpg" },
             { name: "Mr Lidsamai", img: personImg },
             { name: "Miss Pinky", img: personImg },
         ],
@@ -42,13 +32,13 @@ const members = {
             { name: "Mr Yang Kong" , img: personImg },
             { name: "Mr Dala", img: personImg },
             { name: "Mr Ded", img: personImg },
-            { name: "Mr Sayson", img: MrSayson },
+            { name: "Mr Sayson", img: "/members/MrSayson.jpg" },
         ],
     },
     ExternalRelations: {
-        Leader: { name: "Miss Nuttaly", img: MissNuttaly },
+        Leader: { name: "Miss Nuttaly", img: "/members/MissNuttaly.jpg" },
         Members: [
-            { name: "Miss Namwarn", img: MissNamwarn },
+            { name: "Miss Namwarn", img: "/members/MissNamwarn.jpg" },
             { name: "Miss Ulin", img: personImg },
             { name: "Mr Alino", img: personImg },
         ],
