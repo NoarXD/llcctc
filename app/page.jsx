@@ -107,7 +107,7 @@ export default function Home() {
                                 alt={member.name}
                                 width={1000}
                                 height={1000}
-                                className="w-auto h-auto mt-5 rounded-md"
+                                className="w-auto h-auto mt-5 rounded-full"
                             />
                             <p className="mt-4 text-center">{member.name}</p>
                         </div>
