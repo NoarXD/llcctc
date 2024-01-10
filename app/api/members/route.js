@@ -18,19 +18,19 @@ const members = {
         ],
     },
     EnglishSpeaking: {
-        Leader: { name: "Miss Anna", img: personImg },
+        Leader: { name: "Miss Anna", img: "members/MissAnna.jpg" },
         Members: [
             { name: "Miss Panda", img: "/members/MissPanda.jpg" },
             { name: "Mr Lidsamai", img: personImg },
-            { name: "Miss Pinky", img: personImg },
+            { name: "Miss Pinky", img: "/members/MissPinky.jpg" },
         ],
     },
     EnglishTeaching: {
-        Leader: { name: "Mr Sonsay", img: personImg },
+        Leader: { name: "Mr Sonxay", img: "/members/MrSonxay.jpg" },
         Members: [
             { name: "Mr Saysamone", img: personImg },
-            { name: "Mr Yang Kong" , img: personImg },
-            { name: "Mr Dala", img: personImg },
+            { name: "Mr Yang Kong" , img: "/members/MrYangKong.jpg" },
+            { name: "Mr Dala", img: "/members/MrDala.jpg" },
             { name: "Mr Ded", img: personImg },
             { name: "Mr Sayson", img: "/members/MrSayson.jpg" },
         ],
@@ -39,7 +39,7 @@ const members = {
         Leader: { name: "Miss Nuttaly", img: "/members/MissNuttaly.jpg" },
         Members: [
             { name: "Miss Namwarn", img: "/members/MissNamwarn.jpg" },
-            { name: "Miss Ulin", img: personImg },
+            { name: "Miss Ulin", img: "/members/MissUlin.jpeg" },
             { name: "Mr Alino", img: personImg },
         ],
     },
