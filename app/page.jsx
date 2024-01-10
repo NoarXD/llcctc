@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
     const [membersData, setMembersData] = useState(null);
-    const URL = "https://llcctc.vercel.app/api/members"
+    const URL = "https://llcctoastmasterclub.vercel.app/api/members"
     // const URL = "http://localhost:3000/api/members";
 
     useEffect(() => {
