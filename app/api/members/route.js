@@ -23,6 +23,7 @@ const members = {
             { name: "Miss Panda", img: "/members/MissPanda.jpg" },
             { name: "Mr Lidsamai", img: personImg },
             { name: "Miss Pinky", img: personImg },
+            { name: "Miss Souvanhny", img: "/members/MissSouvanhny.jpg" },
         ],
     },
     EnglishTeaching: {
