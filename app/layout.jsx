@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
     title: {
-        template: "LLCCTC | %s",
-        default: "LLCC Toastmaster Club",
+        template: '%s | LLCCTC',
+        default: 'LLCC Toastmaster Club',
     },
     description:
         "LLCC Toastmaster Club serves as a space for youth to develop speaking, presentation, teamwork,leadership skills, and English language proficiency.",

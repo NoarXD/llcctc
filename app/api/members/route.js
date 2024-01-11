@@ -18,7 +18,7 @@ const members = {
         ],
     },
     EnglishSpeaking: {
-        Leader: { name: "Miss Anna", img: "members/MissAnna.jpg" },
+        Leader: { name: "Miss Anna", img: "/members/MissAnna.jpg" },
         Members: [
             { name: "Miss Panda", img: "/members/MissPanda.jpg" },
             { name: "Mr Lidsamai", img: personImg },
